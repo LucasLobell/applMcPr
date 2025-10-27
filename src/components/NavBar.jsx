@@ -1,3 +1,5 @@
+import { navLinks } from "../constants";
+
 const NavBar = () => {
   return (
     <header>
@@ -5,14 +7,7 @@ const NavBar = () => {
         <img src="/logo.svg" alt="Apple Logo" />
 
         <ul>
-          {[
-            { label: "Store" },
-            { label: "Mac" },
-            { label: "iPhone" },
-            { label: "Watch" },
-            { label: "Vision" },
-            { label: "AirPods" },
-          ].map(({ label }) => (
+          {navLinks.map(({ label }) => (
             <li key={label}>
               <a href={label}>{label}</a>
             </li>
